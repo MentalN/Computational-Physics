@@ -43,7 +43,6 @@ def bicycle_calc_drag(P, m, dt, N, vo, C, rho, A):
 
 #   Plots whatever velocity and time arrays passed to it
 def bicycle_plot(t, v, cap):
-    print(v)
     fig = plt.figure()
     fig.suptitle(cap)
     plt.xlabel('Time (s)')
