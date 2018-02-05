@@ -38,6 +38,8 @@ def shell_calc_nodrag(vo, ang, dt, N):
 
 
 #   Calculates shell trajectory with drag
+#   Note: works most of the time under the certain parameters. The more the Drag parameters are near negligible, the
+#   more useless this function becomes
 def shell_calc_drag(vo, ang, dt, rho, A, C, m, N):
     vx = [vo*cos(radians(ang))]
     vy = [vo*sin(radians(ang))]
@@ -45,11 +47,9 @@ def shell_calc_drag(vo, ang, dt, rho, A, C, m, N):
     y = [0]
     t = [0]
     for i in range(N):
-        #   TODO: figure out what is making the projectile move to the left and fix it
         v = sqrt(vx[i]*vx[i] + vy[i]*vy[i])
-        a_D = ((C*rho*A*v*v)/(2*m))
-        a_Dx = a_D*cos(radians(ang))
-        a_Dy = a_D*sin(radians(ang))
+        a_Dx = ((C*rho*A*v*vx[i])/(2*m))
+        a_Dy = ((C*rho*A*v*vy[i])/(2*m))
         vx.append(vx[i] - a_Dx*dt)
         vy.append(vy[i] - g*dt - a_Dy*dt)
         x.append(x[i] + vx[i]*dt)
@@ -81,6 +81,6 @@ def shell_plot(x, y, vx, vy, t, cap):
 
 # main
 #   t_x, t_y, t_vx, t_vy, t_t, title = shell_calc_nodrag(vo=700, ang=45, dt=0.1, N=2000)
-t_x, t_y, t_vx, t_vy, t_t, title = shell_calc_drag(vo=700, ang=45, dt=0.1, rho=1.229, A=0.3, C=0.5, m=50, N=2000)
+t_x, t_y, t_vx, t_vy, t_t, title = shell_calc_drag(vo=700, ang=45, dt=0.1, rho=1.229, A=0.3, C=0.5, m=7, N=2000)
 shell_plot(t_x, t_y, t_vx, t_vy, t_t, title)
 
