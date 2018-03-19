@@ -52,5 +52,5 @@ def bicycle_plot(t, v, cap):
 
 
 #   tp, vp, title = bicycle_calc_no_drag(P=400, m=70, dt=0.1, N=2000, vo=4)
-tp, vp, title = bicycle_calc_drag(P=400, m=70, dt=0.1, N=2000, vo=4, C=0.5, rho=1.229, A=0.33)
-bicycle_plot(tp, vp, title)
+#   tp, vp, title = bicycle_calc_drag(P=400, m=70, dt=0.1, N=2000, vo=4, C=0.5, rho=1.229, A=0.33)
+#   bicycle_plot(tp, vp, title)

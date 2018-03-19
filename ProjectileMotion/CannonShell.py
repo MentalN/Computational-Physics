@@ -69,7 +69,8 @@ def shell_plot(x, y, vx, vy, t, cap):
     plt.ylabel("y-trajectory")
     plt.plot(x, y)
     plt.show()
-#   TODO: add velocity vs time plots
+
+#   TODO: add velocity components vs time plots
 #    fig2 = plt.figure(2)
 #    fig2.suptitle("Velocity components vs time")
 #    plt.subplot(211)
@@ -79,8 +80,8 @@ def shell_plot(x, y, vx, vy, t, cap):
 #    plt.show()
 
 
-# main
+#   main
 #   t_x, t_y, t_vx, t_vy, t_t, title = shell_calc_nodrag(vo=700, ang=45, dt=0.1, N=2000)
-t_x, t_y, t_vx, t_vy, t_t, title = shell_calc_drag(vo=700, ang=45, dt=0.1, rho=1.229, A=0.3, C=0.5, m=7, N=2000)
-shell_plot(t_x, t_y, t_vx, t_vy, t_t, title)
+#   t_x, t_y, t_vx, t_vy, t_t, title = shell_calc_drag(vo=700, ang=45, dt=0.1, rho=1.229, A=0.3, C=0.5, m=7, N=2000)
+#   shell_plot(t_x, t_y, t_vx, t_vy, t_t, title)
 
