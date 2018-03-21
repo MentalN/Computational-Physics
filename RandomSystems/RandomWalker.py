@@ -1,7 +1,7 @@
 #   File: RandomWalker.py
 #   Author: Nawaf Abdullah
 #   Creation Date: 19/Mar/2018
-#   Description: Modeling of the random walker problem in 1D and 2D
+#   Description: Modeling of the random walker problem in 1D, 2D and 3D
 #   Reference: Computational Physics by Nichholas J. Giordano & Hisao Nakanishi (2nd Ed)
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
